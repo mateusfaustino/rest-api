@@ -1,0 +1,23 @@
+{
+  "name": "a-minimalist-rest-api",
+  "version": "1.0.0",
+  "description": "a simple hello world rest api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateusfaustino/a-minimalist-rest-api.git"
+  },
+  "author": "Mateus Faustino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mateusfaustino/a-minimalist-rest-api/issues"
+  },
+  "homepage": "https://github.com/mateusfaustino/a-minimalist-rest-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
