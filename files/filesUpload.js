@@ -10,9 +10,11 @@ module.exports = (path, fileName,callback)=>{
     if(isExtensionValid){
         fs.createReadStream(path)
             .pipe(fs.createWriteStream(newPath))
-            .on('finish',()=>callback(newPath))
+            .on('finish',()=>callback(false,newPath))
     }else{
-        console.log("moiô")
+        const error = "Extension of file is not valid!"
+        console.log("Error: Extension of file is not valid!")
+        callback(error)
     }
     
 }
