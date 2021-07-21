@@ -1,11 +1,13 @@
 const fs = require('fs')
 const path = './assets/pet02.jpg'
 
-function handleError(error){
-    console.log("Error------------------------------------");
-    console.log(error);
+module.exports = (path, fileName,callback)=>{
+    function handleError(error){
+        console.log("Error------------------------------------");
+        console.log(error);
+    }
+    const newPath=`./assets/images${fileName}`
+    fs.createReadStream(path)
+        .pipe(fs.createWriteStream(newPath))
+        .on('finish',()=>callback(newPath))
 }
-fs.createReadStream(path)
-    .pipe(fs.createWriteStream('./assets/pet02-copy.jpg'))
-    .on('finish',()=>console.log('all right!'))
-    
