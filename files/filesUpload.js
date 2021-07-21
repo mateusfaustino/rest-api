@@ -6,7 +6,7 @@ module.exports = (path, fileName,callback)=>{
         console.log("Error------------------------------------");
         console.log(error);
     }
-    const newPath=`./assets/images${fileName}`
+    const newPath=`./assets/images/${fileName}`
     fs.createReadStream(path)
         .pipe(fs.createWriteStream(newPath))
         .on('finish',()=>callback(newPath))
